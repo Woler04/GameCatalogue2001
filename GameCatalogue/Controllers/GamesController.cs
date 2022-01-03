@@ -119,7 +119,7 @@ namespace GameCatalogue.Controllers
         public async Task<IActionResult> Create([Bind("Id,Title,Requirements,Description,Genre,Price,ImageUrl")] CreateGameBindingModel createModel)
         {
 
-            if (ModelState.IsValid)
+            if (ModelState.IsValid || !User.Identity.IsAuthenticated)
             {
                 string wwwRoothPath = _hostEnviroment.WebRootPath;
 
@@ -158,7 +158,7 @@ namespace GameCatalogue.Controllers
         // GET: GamesModels/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null)
+            if (id == null || !User.Identity.IsAuthenticated)
             {
                 return NotFound();
             }
@@ -187,7 +187,7 @@ namespace GameCatalogue.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Requirements,Description,Genre,Price,ImageUrl")] EditGameBindingModel editModel)
         {
-            if (id != editModel.Id)
+            if (id != editModel.Id || !User.Identity.IsAuthenticated)
             {
                 return NotFound();
             }
@@ -241,7 +241,7 @@ namespace GameCatalogue.Controllers
         // GET: GamesModels/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null)
+            if (id == null || !User.Identity.IsAuthenticated)
             {
                 return NotFound();
             }

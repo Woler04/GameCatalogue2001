@@ -2,13 +2,46 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center d-block">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    <div>
-        <img src="https://localhost:44393/images/rei_8f12650f-e1a1-418c-bef7-c155644b7bcc.jpg" alt="Missing Image" class="w-25">
-        <img class="" src="https://i.imgflip.com/5zbv8c.jpg" title="made at imgflip.com" />
-        <div><a href="https://imgflip.com/memegenerator">from Imgflip Meme Generator</a></div>
+<div class="text-center d-none d-md-block">
+    <h1 class="display-4 text-center text-light my-sm-3">Game Catalogue 2001</h1>
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <a asp-area="" asp-controller="Games" asp-action="Index">
+                <div class="carousel-item active" data-bs-interval="5000">
+                    <img src="https://cdn.discordapp.com/attachments/404584810661543951/927632175132704788/cd1b8603705e65619b094134f9d29054_2375416476351444339.png"
+                         class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="https://cdn1.epicgames.com/3328b08ac1c14540aa265a1a85c07839/offer/hzd_wide-2560x1440-bd312be05c49cf339097777c493cb899.jpg"
+                         class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="https://media.discordapp.net/attachments/404584810661543951/927632567342075964/hollow-knight-switch-hero.png?width=1202&height=676" 
+                         class="d-block w-100" alt="...">
+                </div>
+            </a>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
+</div>
+<div class="text-center d-block d-md-none">
+    <h1 class="display-4">buy bigger screen</h1>
 </div>
 
